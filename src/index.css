@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bottom-bar {
+    @apply flex flex-row items-center justify-between 
+    fixed left-36 right-36 bottom-8
+    rounded-lg shadow-lg 
+    bg-gray-200 
+    h-12 p-4;
+}
+
+.bottom-bar-input {
+    @apply font-semibold w-full
+    bg-transparent outline-none 
+    ml-0 
+    text-gray-500 placeholder-gray-500
+    cursor-text;
+  }
+
+.cursor span:last-of-type:after {
+    content: "|"
+}
+
+.message li:last-child span span {
+    visibility: hidden;
+}
+
+.loader {
+	border-top-color: #3498db;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
